@@ -1,0 +1,211 @@
+<nav id="navbar">
+  <h1>Ruby On Rails</h1>
+  <ul>
+    <li><a class="nav-link" href="#intro">Introduction</a></li>
+    <li><a class="nav-link" href="#framework">Framework</a></li>
+    <li><a class="nav-link" href="#directory_structure">Directory Structure</a></li>
+    <li><a class="nav-link" href="#examples">Examples</a></li>
+    <li><a class="nav-link" href="#database_setup">Database Setup</a></li>
+    <li><a class="nav-link" href="#active_records">Active Records</a></li>
+    <li><a class="nav-link" href="#migrations">Migrations</a></li>
+    <li><a class="nav-link" href="#controllers">Controllers</a></li>
+    <li><a class="nav-link" href="#routes">Routes</a></li>
+    <li><a class="nav-link" href="#views">Views</a></li>
+    <li><a class="nav-link" href="#layouts">Layouts</a></li>
+    <li><a class="nav-link" href="#references">References</a></li>
+  </ul>
+</nav>
+<link rel="stylesheet" href="rubyStyle.css">
+<main id="main-doc">
+  <section class="main-section" id="intro">
+    <h1>Introduction</h1>
+    <article>
+      <h3>What is Ruby?</h3>
+      <p>
+        Before we ride on Rails, let us recapitulate a few points of Ruby, which is the base of Rails.
+
+Ruby is the successful combination of −
+      </p>
+        <ul>
+          <li>Smalltalk's conceptual elegance.</li>
+          <li>Python's ease of use and learning.</li>
+          <li>Perl's pragmatism.</li>
+        </ul>
+        <p>
+      Ruby is -
+        </p>
+       <ul>
+        <li>A high-level programming language.</li>
+        <li>Interpreted like Perl, Python, Tcl/Tk.</li>
+        <li>Object oriented like Smalltalk, Ada, Eiffel, Java.</li>
+      </ul>
+      <h3>Why Ruby?</h3>
+      <p>
+        Ruby originated in Japan and now it is gaining popularity in US and Europe as well. The following factors contribute towards its popularity −
+      </p>
+       <ul>
+         <li>Open source (very liberal license).</li>
+         <li>Rich libraries.</li>
+         <li>Helpful community.</li>
+       </ul>
+    </article>
+  </section>
+  <section class="main-section" id="framework">
+    <h1>Framework</h1>
+    <article>
+      <p>
+        A framework is a program, set of programs, and/or code library that writes most of your application for you. When you use a framework, your job is to write the parts of the application that make it do the specific things you want.
+
+When you set out to write a Rails application, leaving aside the configuration and other housekeeping chores, you have to perform three primary tasks −
+      </p>
+      <ul>
+        <li><strong>Describe and model your application's domain</strong> − The domain is the universe of your application. The domain may be a music store, a university, a dating service, an address book, or a hardware inventory. So here you have to figure out what's in it, what entities exist in this universe and how the items in it relate to each other. This is equivalent to modeling a database structure to keep the entities and their relationship.</li>
+        <li><strong>Specify what can happen in this domain</strong> − The domain model is static; you have to make it dynamic. Addresses can be added to an address book. Musical scores can be purchased from music stores. Users can log in to a dating service. Students can register for classes at a university. You need to identify all the possible scenarios or actions that the elements of your domain can participate in.</li>
+        <li><strong>Choose and design the publicly available views of the domain</strong> − At this point, you can start thinking in Web-browser terms. Once you've decided that your domain has students, and that they can register for classes, you can envision a welcome page, a registration page, and a confirmation page, etc. Each of these pages, or views, shows the user how things stand at a certain point.</li>
+      </ul>
+      <p>
+        Based on the above three tasks, Ruby on Rails deals with a Model/View/Controller (MVC) framework.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="directory_structure">
+    <h1>Directory Structure</h1>
+    <article>
+      <p>
+        When you use the Rails helper script to create your application, it creates the entire directory structure for the application. Rails knows where to find things it needs within this structure, so you don't have to provide any input.
+
+Here is a top-level view of a directory tree created by the helper script at the time of application creation. Except for minor changes between releases, every Rails project will have the same structure, with the same naming conventions. This consistency gives you a tremendous advantage; you can quickly move between Rails projects without relearning the project's organization.
+      </p>
+    </article>
+  </section>
+  <section class='main-section' id="examples">
+    <h1>Examples</h1>
+    <article>
+      <h3>Creating an Empty Rails Web Application</h3>
+      <p>
+Rails is both a runtime web application framework and a set of helper scripts that automate many of the things you do when developing a web application. In this step, we will use one such helper script to create the entire directory structure and the initial set of files to start our Library System application.
+      </p>
+      <ul>
+        <li>Go into ruby installation directory to create your application.</li>
+        <li>Run the following command to create a skeleton for library application. It will create the directory structure in the current directory.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="database_setup">
+    <h1>Database Setup</h1>
+    <article>
+      <p>
+        Make sure your database server is up and running. Ruby on Rails recommends to create three databases - a database each for development, testing, and production environment. According to convention, their names should be −
+      </p>
+      <ul>
+        <li>library_development</li>
+        <li>library_production</li>
+        <li>library_test</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="active_records">
+    <h1>Active Records</h1>
+    <article>
+      <p>
+        Rails Active Record is the Object/Relational Mapping (ORM) layer supplied with Rails. It closely follows the standard ORM model, which is as follows −
+      </p>
+      <ul>
+        <li>tables map to classes</li>
+        <li>rows map to objects</li>
+        <li>columns map to object attributes</li>
+      </ul>
+      <p>
+        Rails Active Records provide an interface and binding between the tables in a relational database and the Ruby program code that manipulates database records. Ruby method names are automatically generated from the field names of database tables.
+
+Each Active Record object has CRUD (Create, Read, Update, and Delete) methods for database access. This strategy allows simple designs and straight forward mappings between database tables and application objects.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="migrations">
+    <h1>Migrations</h1>
+    <article>
+      <p>
+        Rails Migration allows you to use Ruby to define changes to your database schema, making it possible to use a version control system to keep things synchronized with the actual code.
+
+This has many uses, including −
+      </p>
+      <ul>
+        <li><strong>Teams of developers</strong> − If one person makes a schema change, the other developers just need to update, and run "rake migrate".</li>
+        <li><strong>Production servers</strong> − Run "rake migrate" when you roll out a new release to bring the database up to date as well.</li>
+        <li><strong>Multiple machines</strong> − If you develop on both a desktop and a laptop, or in more than one location, migrations can help you keep them all synchronized.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="controllers">
+    <h1>Controllers</h1>
+    <article>
+      <p>
+        The Rails controller is the logical center of your application. It coordinates the interaction between the user, the views, and the model. The controller is also a home to a number of important ancillary services.
+      </p>
+      <ul>
+        <li>It is responsible for routing external requests to internal actions. It handles people-friendly URLs extremely well.</li>
+        <li>It manages caching, which can give applications orders-of-magnitude performance boosts.</li>
+        <li>It manages helper modules, which extend the capabilities of the view templates without bulking up their code.</li>
+        <li>It manages sessions, giving users the impression of an ongoing interaction with our applications.</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="routes">
+    <h1>Routes</h1>
+    <article>
+      <p>
+        The routing module provides URL rewriting in native Ruby. It's a way to redirect incoming requests to controllers and actions. It replaces the mod_rewrite rules. Best of all, Rails' Routing works with any web server. Routes are defined in app/config/routes.rb.
+
+Think of creating routes as drawing a map for your requests. The map tells them where to go based on some predefined pattern −
+        
+        <em><strong>Rails.application.routes.draw do
+   Pattern 1 tells some request to go to one place
+   Pattern 2 tell them to go to another
+   ...
+          end</strong></em>
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="views">
+    <h1>Views</h1>
+    <article>
+      <p>
+        A Rails View is an ERb program that shares data with controllers through mutually accessible variables.
+
+If you look in the app/views directory of the library application, you will see one subdirectory for each of the controllers, we have created: book. Each of these subdirectories was created automatically when the same-named controller was created with the generate script.
+
+Rails let's you know that you need to create the view file for each new method. Each method you define in the controller needs to have a corresponding erb file, with the same name as the method, to display the data that the method is collecting.
+
+So let's create view files for all the methods we have defined in the book_controller.rb. While executing these views, simultaneously check these actions are applicable into the database or not.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="layouts">
+    <h1>Layouts</h1>
+    <article>
+      <p>
+        A layout defines the surroundings of an HTML page. It's the place to define a common look and feel of your final output. Layout files reside in app/views/layouts.
+
+The process involves defining a layout template and then letting the controller know that it exists and to use it. First, let's create the template.
+
+Add a new file called standard.html.erb to app/views/layouts. You let the controllers know what template to use by the name of the file, so following a same naming scheme is advised.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="references">
+    <h1>References</h1>
+    <article>
+      <p>
+        Here we have listed out all the important functions, scripts, validations etc. You can bookmark this page for easy access.
+      </p>
+      <ul>
+        <li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-and-rake.htm" target="_blank">Ruby on Rails - Rake Utility</a></li>
+        <li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-scripts.htm" target="_blank">Ruby on Rails - The Scripts</a></li>
+        <li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-plugins.htm" target="_blank">Ruby on Rails - The Plugins</a></li>
+        <li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-generators.htm" target="_blank">Ruby on Rails - The Generators</a></li>
+        <li><a href="https://www.tutorialspoint.com/ruby-on-rails/index.htm" target="_blank">Ruby on Rails - The Whole Reference</a></li>
+      </ul>
+    </article>
+  </section>
+</main>
